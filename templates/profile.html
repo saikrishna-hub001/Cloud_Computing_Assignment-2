@@ -1,0 +1,26 @@
+<!-- /var/www/flaskapp/templates -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <h2>User Profile</h2>
+    
+    {% if user %}
+        <p><strong>Username:</strong> {{ user[0] }}</p>
+        <p><strong>First Name:</strong> {{ user[2] }}</p>
+        <p><strong>Last Name:</strong> {{ user[3] }}</p>
+        <p><strong>Email:</strong> {{ user[4] }}</p>
+        <p><strong>Address:</strong> {{ user[5] }}</p>
+
+        {% else %}
+        <p>User not found.</p>
+
+    {% endif %}
+    
+    <a href="/">Go back to registration</a>
+</body>
+</html>
